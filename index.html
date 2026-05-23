@@ -243,7 +243,7 @@
     // バリデーションしてrowsを返す
     function collectRows() {
       const rows = [];
-      const personCards = document.querySelectorAll('.person-card');
+      const personCards = document.querySelectorAll('.person-card[id^="person-"]');
       if (personCards.length === 0) throw new Error('人物を1件以上追加してください');
       for (const pcard of personCards) {
         const pid = pcard.id.replace('person-', '');
